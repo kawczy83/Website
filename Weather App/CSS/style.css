@@ -1,0 +1,20 @@
+body {
+    background-image: url("http://cdn.weatheravenue.com/img/background/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+.well {
+    background-color: rgba(0, 255, 255, 0.6);
+}
+
+#quote, #demo {
+    color: #FF4800;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
