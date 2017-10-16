@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kyle Kawczynski Portfolio</title>
+  <meta name="description" content="jQuery Word Game">
+  <meta name="author" content="Kyle Kawczynski">
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/animate.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+ <div class="container-fluid">
+  <header>
+   <h1>Kyle Kawczynski's</h1>
+  </header>
+
+  <hr>
+	
+  <div class="text-center">
+    <h1>Word game!</h1>
+    <form id="joke-form">
+        <label class="form-group">
+            Unscramble these letters to form a 
+			<a href='#' title='By the way, JQUERY is the correct answer.'>word:</a><Br>
+			(<mark class="red">Warning!</mark> Sound Alert)
+            <br>
+			<span class="scrambled">REYJUQ</span>
+            <br><br>
+            <input type="text">
+			<button class="btn-primary">Check</button>
+        </label>
+    </form>
+	
+    <div id="result"></div>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+	var $sound1 = $("<audio preload=auto>");
+	var $sound2 = $("<audio preload=auto>");
+	$sound1.attr("src",
+        "Sounds/correct1.mp3");
+	$sound2.attr("src",
+        "Sounds/Wrong1.mp3");
+        // when the user submits the form,
+        $('#joke-form').on('submit', function(event) {
+            event.preventDefault();
+            var $answer = $(this).find('[type=text]');
+            var answer = $answer.val();
+			// check that their answer is correct
+			//  and show them appropriate message
+            if (answer === "JQUERY" || answer === "jquery"){
+				$("#result").addClass("animated bounceIn");
+                $("#result").html("<h3>Correct!</h3>"); 
+				$sound1[0].play();
+				} else {
+				$("#result").addClass("animated shake");	
+                $("#result").html("<h3>Wrong!</h3>");
+				$sound2[0].play();		
+                };
+            });
+    </script>
+    </body>
+</html>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
