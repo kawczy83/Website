@@ -1,0 +1,26 @@
+body {
+    background-image: url("http://www.powerpointhintergrund.com/uploads/cloud-wallpaper-13.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    color: white;
+}
+
+#quote {
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 20px;
+    color: white;
+}
+
+#author {
+    color: rgb(255, 187, 0);
+    font-family: 'Lobster', cursive;
+}
+
+
+
+#menu1 {
+    background: rgba(0, 183, 255, 0.15);
+}
