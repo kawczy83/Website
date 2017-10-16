@@ -1,0 +1,14 @@
+header {
+    text-align: center;
+}
+
+#result {
+    color: blue;
+    -vendor-animation-iteration-count: infinite;
+}
+
+
+.scrambled {
+    font-size: 36px;
+}
+
